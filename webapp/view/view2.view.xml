@@ -1,0 +1,59 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:sf2="sap.ui.layout.form"
+	controllerName="ACRUD.Assignment_CRUD.controller.view2" xmlns:html="http://www.w3.org/1999/xhtml">
+	<SplitApp id="detailsId3">
+		<masterPages>
+			<Page title="Employee Names" titleAlignment="Center" showNavButton="true" navButtonPress="onNavBack">
+				<List items="{/EMPLOYEESet}" itemPress="onClickItems" id="employeelist">
+					<items>
+						<ObjectListItem title="{Empname}" type="Navigation"></ObjectListItem>
+					</items>
+				</List>
+				<footer id="footer1">
+					<Bar>
+						<contentRight>
+							<Button id="idCreate1" icon="sap-icon://create-form" text="create" type="Emphasized" enabled="true" press="createDetailsinMaster"
+								visible="true"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page title="Employees Detail" titleAlignment="Center" titleLevel="Auto" class="detailpageId">
+				<headerContent>
+					<Button id="idUpdate3" icon="sap-icon://edit" text="update" type="Emphasized" enabled="true" press="open" visible="true"/>
+					<Button icon="sap-icon://bbyd-dashboard" press="onNext" text="Dashboard" type="Emphasized"/>
+				</headerContent>
+				<content>
+					<IconTabBar>
+						<items>
+							<IconTabFilter text=" Details" icon="sap-icon://hint">
+								<f:SimpleForm id="simpleForm3" editable="false">
+									<f:content>
+										<core:Title text="Employee Details" level="H3"/>
+										<Label text="Emp Id"></Label>
+										<Text id="empTextId" text="{Empno}" width="50%" submit="onEdit" editable="false"/>
+										<Text/>
+										<Label text="Emp Name"></Label>
+										<Text id="setTextId" text="{Empname}" width="50%" editable="false"/>
+										<Text/>
+										<Label text="Emp Designation"></Label>
+										<Text id="setDesintionId" text="{Empdesig}" width="50%" editable="false"/>
+									</f:content>
+								</f:SimpleForm>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer id="Green">
+					<Bar>
+						<contentRight>
+						
+							<Button id="idDelete" icon="sap-icon://delete" text="delete" type="Reject" enabled="true" press="deleteDetails" visible="true"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>

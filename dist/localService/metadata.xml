@@ -1,0 +1,45 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZSHIV_READDBT_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="EMPLOYEE" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Empno"/>
+				</Key>
+				<Property Name="Empno" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="employee no" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Empname" Type="Edm.String" Nullable="false" MaxLength="15" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Empdesig" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="DESIGNATION" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				</EntityType>
+			<EntityType Name="EMPSTATUS" sap:content-version="1">
+				<Key><PropertyRef Name="TYPE"/></Key>
+				<Property Name="TYPE" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+					<Property Name="MESSAGE" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				</EntityType>
+			<EntityContainer Name="ZSHIV_READDBT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="EMPLOYEESet" EntityType="ZSHIV_READDBT_SRV.EMPLOYEE" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="EMPSTATUSSet" EntityType="ZSHIV_READDBT_SRV.EMPSTATUS" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<FunctionImport Name="EMPBYDESIGNATION" ReturnType="Collection(ZSHIV_READDBT_SRV.EMPLOYEE)" EntitySet="EMPLOYEESet" m:HttpMethod="GET"
+					sap:action-for="ZSHIV_READDBT_SRV.EMPLOYEE">
+					<Parameter Name="DESIGNATION" Type="Edm.String" Mode="In"/>
+					</FunctionImport>
+				<FunctionImport Name="EMPIMPORT" ReturnType="ZSHIV_READDBT_SRV.EMPSTATUS" EntitySet="EMPSTATUSSet" m:HttpMethod="POST"
+					sap:action-for="ZSHIV_READDBT_SRV.EMPSTATUS">
+					<Parameter Name="EMP_NO" Type="Edm.String" Mode="In"/>
+					<Parameter Name="EMP_NAME" Type="Edm.String" Mode="In"/>
+					<Parameter Name="EMP_DESIG" Type="Edm.String" Mode="In"/>
+					</FunctionImport>
+			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="http://124.123.42.25:7200/sap/opu/odata/sap/ZSHIV_READDBT_SRV/$metadata"/>
+				<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://124.123.42.25:7200/sap/opu/odata/sap/ZSHIV_READDBT_SRV/$metadata"/>
+				</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

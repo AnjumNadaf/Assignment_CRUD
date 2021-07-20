@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Dialog id="diaologgllla" title="Create New Data" titleAlignment="Center">
+		<content>
+			<f:SimpleForm id="createEmpDetails" visible="true" editable="true" layout="ResponsiveGridLayout" adjustLabelSpan="false" emptySpanL="6"
+				columnsL="1">
+				<f:content>
+					<Label text="EmpNo" required="true" design="Bold"/>
+					<Input id="empIDC" liveChange="onLiveChangeCreateID" maxLength="3"/>
+					<Label text="EmpName" required="true" design="Bold"/>
+					<Input id="empNameC" liveChange="onLiveChangeCreateName" maxLength="20"/>
+					<Label text="Emp Desiganation" required="true" design="Bold"/>
+					<Select width="100%" id="typeOfd">
+						<items>
+							<core:Item key="Developer" text="Developer"></core:Item>
+							<core:Item key="Consultant" text="Consultant"></core:Item>
+							<core:Item key="Manager" text="Manager"></core:Item>
+							<core:Item key="Director" text="Director"></core:Item>
+							<core:Item key="Tester" text="Tester"></core:Item>
+							<core:Item key="Founder" text="Founder"></core:Item>
+						</items>
+					</Select>
+					<Label></Label>
+					<Button text="Save" press="CreateDetails"></Button>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<beginButton>
+			<Button text="Close" press="onCloses"></Button>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

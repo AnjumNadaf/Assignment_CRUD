@@ -1,0 +1,93 @@
+{
+    "resources": [
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "controller\\View3.controller.js"
+        },
+        {
+            "name": "model\\models.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "controller\\view2.controller.js"
+        },
+        {
+            "name": "controller\\View1.controller.js"
+        },
+        {
+            "name": "serviceBinding.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "model\\models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller\\View3-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller\\view2-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller\\View1-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "serviceBinding-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "..\\..\\sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "view\\View3.view.xml"
+        },
+        {
+            "name": "view\\view2.view.xml"
+        },
+        {
+            "name": "view\\View1.view.xml"
+        },
+        {
+            "name": "localService\\metadata.xml"
+        },
+        {
+            "name": "Fragments\\updateForm.fragment.xml"
+        },
+        {
+            "name": "Fragments\\CreateForm.fragment.xml"
+        },
+        {
+            "name": "css\\style.css"
+        },
+        {
+            "name": "i18n\\i18n.properties",
+            "raw": "i18n\\i18n.properties"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","ACRUD/Assignment_CRUD/model/models"],function(e,t,i){"use strict";return e.extend("ACRUD.Assignment_CRUD.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(i.createDeviceModel(),"device")}})});

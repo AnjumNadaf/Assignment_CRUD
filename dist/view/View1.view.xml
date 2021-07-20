@@ -1,0 +1,32 @@
+<mvc:View controllerName="ACRUD.Assignment_CRUD.controller.View1" xmlns:tnt="sap.tnt" xmlns:sf="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page id="page" title="Employee Management" class="myBackgroundStyle" titleAlignment="Center" titleLevel="H1">
+				<content>
+					<tnt:ToolHeader>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://SAP-icons-TNT/User"></Button>
+					</tnt:ToolHeader>
+					<VBox fitContainer="true" alignItems="Center" justifyContent="Center">
+						<items>
+							<sf:SimpleForm editable="true">
+								<VBox alignContent="Center" justifyContent="Center">
+									<HBox alignContent="Center" justifyContent="Center">
+										<Input id="idUsername" placeholder="Enter Your Name" width="20rem" fieldWidth="30rem"></Input>
+									</HBox>
+									<HBox alignContent="Center" justifyContent="Center">
+										<Input id="idPassword" placeholder="Enter Your Password" width="20rem" type="Password"></Input>
+									</HBox>
+									<HBox alignContent="Center" justifyContent="Center">
+										<Button text="Login" width="20rem" press="onPress" type="Attention" id="viewButton"></Button>
+									</HBox>
+								</VBox>
+							</sf:SimpleForm>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
